@@ -25,7 +25,7 @@ exports.registerUser = async (req, res) => {
 
 exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
-
+  console.log(email, password)
     try {
         const foundUsers = await users.findAll({ where: { email } });
 

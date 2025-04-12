@@ -19,5 +19,6 @@ exports.isAuthenticated = async (req , res , next)=> {
     })
   }
   req.userId = verifiedResult.id
+  req.organizationNumber = user.currentOrganization
   next()
 }
